@@ -1,0 +1,83 @@
+.align-center {
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.menu {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+[data-whatinput="mouse"] .menu>li {
+  outline: 0;
+}
+
+.menu>li {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  display: table;
+}
+
+.hover-underline-menu {
+  width: 100%;
+}
+
+.hover-underline-menu .menu {
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #e1e3e8;
+}
+
+.hover-underline-menu .menu a {
+  color: #3d3e42;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 2rem;
+}
+
+.hover-underline-menu .menu .underline-from-center {
+  position: relative;
+  display: table-cell;
+}
+
+.hover-underline-menu .menu .underline-from-center::after {
+  content: "";
+  position: absolute;
+  top: calc(100% - 0.2rem);
+  border-bottom: 0.25rem solid #4090ff;
+  left: 50%;
+  right: 50%;
+  transition: all 0.5s ease;
+}
+
+.hover-underline-menu .menu a.underline-from-center:active, .hover-underline-menu .menu a.active {
+    color: #4090ff;
+}
+
+.hover-underline-menu .menu a.active::after {
+  position: absolute;
+  top: calc(100% - 0.2rem);
+  right: 0;
+  left: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #4090ff;
+}
+
+.hover-underline-menu .menu .underline-from-center:hover::after {
+  left: 0;
+  right: 0;
+  transition: all 0.5s ease;
+}

@@ -1,0 +1,47 @@
+.trigger-controls {
+  opacity: .6;
+  position: relative;
+  padding: 10px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.trigger-controls:hover {
+  opacity: 1;
+}
+
+.trigger-controls:hover .item-controls {
+  display: block;
+}
+
+.item-controls {
+  display: none;
+  position: absolute;
+  right: 0px;
+  color: inherit;
+  border-radius: 4px;
+  background-color: #FFFFFF;
+  border: 1px solid #e1e3e8;
+  box-shadow: 0px 5px 10px 0px rgba(225, 227, 232, 0.77);
+  width: 120px;
+  z-index: 999;
+}
+
+.item-controls li {
+  color: #3d3e42;
+  padding: 10px 15px;
+  transition: all .25s ease-in-out;
+}
+
+.item-controls li:hover {
+    background-color: #F1F3F7;
+    box-shadow: 0 1px #e1e3e8;
+}
+
+.editButton:hover {
+    color: darkturquoise;
+}
+
+li.removeButton:hover {
+    color: orangered;
+}
