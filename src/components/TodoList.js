@@ -6,8 +6,7 @@ export default class TodoList extends Component {
   constructor(props) {
     super();
     this.state = {
-      value: '',
-      checked: false
+      value: ''
     };
   }
 
@@ -15,12 +14,11 @@ export default class TodoList extends Component {
     event.preventDefault();
     this.refs.triggerCheckboxes.click();
     console.log(this.refs.complete);
-    // this.chkbox.setState({checked: true});
   }
 
   render() {
     const listItems = this.props.todos.map((listItem, index) =>
-      <TodoItem key={index} complete={listItem.complete} id={"list-item-" + index} content={listItem.content}/>
+      <TodoItem key={index} complete={listItem.complete} content={listItem.content} />
     )
     return (
       <div className="container">

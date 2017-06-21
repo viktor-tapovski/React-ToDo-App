@@ -8,10 +8,10 @@ import './assets/App.css';
 var todos = [
   {
     content: 'Wash the dishes',
-    status: true
+    complete: true
   }, {
     content: 'Go to the store',
-    status: false
+    complete: false
   }
 ];
 
@@ -41,6 +41,7 @@ export default class App extends Component {
           todos={this.state.todos}
           items={this.state.items}
           removeItem={this.state.remove}
+          save={this.state.saveItem}
         />
         <triggerButton />
       </div>
